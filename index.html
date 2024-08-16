@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamuddin Ahmad</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/A-icons8-a-64.png" type="image/x-icon">
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #f1f1f100;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #88888800;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #55555500;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <img src="./images/header-bg-color.png" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <h1><span class=" text-3xl">A</span>namuddin <span class=" text-3xl">A</span>hmad</h1>
+
+        <ul
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="./images/moon_icon.png" class="w-6 dark:hidden">
+                <img src="./images/sun_icon.png" class="w-6 hidden dark:block">
+            </button>
+
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full m1-4 font-Ovo dark:border-white/50">
+                Contact
+                <img src="./images/arrow-icon.png" class="w-3 dark:hidden">
+                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block">
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openmenu()">
+                <img src="./images/menu-black.png" class="w-6 dark:hidden">
+                <img src="./images/menu-white.png" class="w-6 hidden dark:block">
+            </button>
+
+        </div>
+
+        <!---------------mobile menu ------->
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closemenu()">
+                <img src="./images/close-black.png" class="w-5 cursor-pointer dark:hidden">
+                <img src="./images/close-white.png" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closemenu()">Home</a></li>
+            <li><a href="#about" onclick="closemenu()">About me</a></li>
+            <li><a href="#services" onclick="closemenu()">Services</a></li>
+            <li><a href="#work" onclick="closemenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closemenu()">Contact me</a></li>
+        </ul>
+    </nav>
+    <!--------header---------------------------------------->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+
+        <img src="./images/Profile.jpg" class="rounded-md w-32 mt-28">
+        <h3 class="flex items-end gap-2 text-xml md:text-2xl mb-3 font-Ovo">Hi! I'm Anamuddin Ahmad<img
+                src="./images/hand-icon.png" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Software Developer Fresher</h1>
+        <p class="max-w-2xl mx-auto font-Ovo">Welcome to my portfolio! I'm an aspiring software developer passionate
+            about front-end development with expertise in MERN and Web Development.</p>
+
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contact"
+                class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">contact
+                me<img src="./images/right-arrow-white.png" class="w-4"></a>
+
+            <a href="https://drive.google.com/file/d/1q0ui04CjTKtwOfPNoewBObTC4bBI7UQy/view?usp=drivesdk"
+                target="_blank" download
+                class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">my
+                resume<img src="./images/download-icon.png" class="w-4"></a>
+        </div>
+    </div>
+
+
+    <!------------------------About me-------->
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+        <h2 class="text-center text-5xl font-Ovo">About me</h2>
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img src="./images/download.png" class="w-64 sm:w-80 rounded-3xl max-w-none">
+
+                <div
+                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img src="./images/Circular_logo.png" class="w-full">
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl font-Ovo">
+                    I’m Anamuddin Ahmad, an enthusiastic and aspiring software developer with a recent degree in
+                    Computer Science and Engineering. My passion lies in crafting sophisticated, responsive, and
+                    user-centric web interfaces, utilizing a robust skill set that includes HTML, CSS, JavaScript, and
+                    MongoDB, ExpressJs, ReactJs, NodeJs. Driven by a deep curiosity and commitment to continuous
+                    learning, I am eager to engage in
+                    innovative projects that challenge and refine my development expertise.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./images/code-icon.png" class="w-7 mt-3 dark:hidden">
+                        <img src="./images/code-icon-dark.png" class="w-7 mt-3 hidden dark:block">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Java, HTML, CSS, JavaScript, MongoDB,
+                            ExpressJs, ReactJs, NodeJs
+                            Wordpress, NoSql, Ui/Ux</p>
+                    </li>
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./images/edu-icon.png" class="w-7 mt-3 dark:hidden">
+                        <img src="./images/edu-icon-dark.png" class="w-7 mt-3 hidden dark:block">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">BE in Computer Science and
+                            Engineering</p>
+                    </li>
+                    <li
+                        class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="./images/project-icon.png" class="w-7 mt-3 dark:hidden">
+                        <img src="./images/project-icon-dark.png" class="w-7 mt-3 hidden dark:block">
+
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Based on HTML, CSS, JavaScript, MongoDB,
+                            ExpressJs, ReactJs, NodeJs.</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700 dark:text-white/80">Tools I Use</h4>
+
+                <ul class="flex items-center flex-wrap gap-3 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/vscode.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/wordpress.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/mysql.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/figma.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/git.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/oracle.png" class="w-7 sm:w-7">
+                    </li>
+                </ul>
+
+                <h4 class="my-6 text-gray-700 dark:text-white/80">Web Technologies</h4>
+
+                <ul class="flex items-center flex-wrap gap-3 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/mongocom.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/expressjs_logo_icon_169185.png" class="w-5 sm:w-7 color-white">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/react753244.png" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/node-js.svg" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/html-5.svg" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/css-3.svg" class="w-7 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/node-js (1).svg" class="w-7 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/tailwind-css-icon.webp" class="w-7 sm:w-7">
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---------------Services--------------------->
+
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">What I offer !!</h4>
+        <h2 class="text-center text-5xl font-Ovo">My Services</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Offering responsive web design and development services,
+            specializing in creating intuitive user interfaces with HTML, CSS, JavaScript, MongoDB, ExpressJs, ReactJs,
+            NodeJs, TailwindCss, and UI/UX designing in Web Development using Wordpress.</p>
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/web-icon.png">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web design</h3>
+                <p class="texxt-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of
+                    building, programming..</p>
+                <a href="https://github.com/anamuddinahmad" class="flex items-center gap-2 text-sm mt-5">Read more <img
+                        src="./images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/ui-icon.png">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI/ UX design</h3>
+                <p class="texxt-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of
+                    building, programming..</p>
+                <a href="#" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/right-arrow.png"
+                        alt="" class="w-4"></a>
+            </div>
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./images/graphics-icon.png">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Wordpress design</h3>
+                <p class="texxt-sm text-gray-600 leading-5 dark:text-white/80">Web development using Wordpress is the
+                    process of building, without codes..</p>
+                <a href="https://github.com/anamuddinahmad" class="flex items-center gap-2 text-sm mt-5">Read more <img
+                        src="./images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------my work----------------------------->
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
+        <h2 class="text-center text-5xl font-Ovo">My Latest Work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12  font-Ovo">Explore my recent work: a Java GUI Tic-Tac-Toe
+            game, a React-based QR Code generator, and dynamic websites including a book publishing platform and a Tea
+            Garden site. Each project showcases my skills in web development, front-end design, and
+            software-development.</p>
+
+        <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+            <div
+                class="aspect-square bg-[url('./images/Tictactoe.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">E-comerce </h2>
+                        <p class="text-sm text-gray-700">E-comerce Based Software Development</p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <a href="https://github.com/anamuddinahmad" target="_blank"><img src="./images/send-icon.png"
+                                alt="" class="w-5"></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./images/QrCodeG.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">GPS Tracker</h2>
+                        <p class="text-sm text-gray-700">API -Based Web project</p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <a href="https://github.com/anamuddinahmad" target="_blank"><img src="./images/send-icon.png"
+                                alt="" class="w-5"></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./images/BookPub.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">Image Bloging Site</h2>
+                        <p class="text-sm text-gray-700">Web development</p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <a href="https://github.com/anamuddinahmad" target="_blank"><img src="./images/send-icon.png"
+                                alt="" class="w-5"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./images/Tea-Garden.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">NotePad</h2>
+                        <p class="text-sm text-gray-700">Web development</p>
+                    </div>
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <a href="https://github.com/anamuddinahmad" target="_blank"> <img src="./images/send-icon.png"
+                                alt="" class="w-5"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/anamuddinahmad" target="_blank"
+            class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">Show
+            more
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+            <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+        </a>
+    </div>
+
+    <!-----------------Contact--------------------------->
+
+    <div id="contact"
+        class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+        <h4 class="text-center mb-2 text-lg font-Ovo">Contact with me</h4>
+        <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Feel free to reach out for collaboration, inquiries, or just
+            to say hello!</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="max-w-2xl mx-auto">
+
+            <input type="hidden" name="access_key" value="cea0bbe0-1384-4be2-9d7c-f57558a556f1">
+
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Enter Your name"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    required name="name">
+
+                <input type="email" placeholder="Enter Your email"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    required name="email">
+            </div>
+            <textarea rows="6" name="message" placeholder="Enter your message"
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+                required></textarea>
+
+            <button
+                class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit
+                now
+                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </button>
+        </form>
+    </div>
+
+    <!----------------------footer-------------------------------->
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="./images/port_logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="./images/port_logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+                <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+                anamuddinahmad0786@gmail.com
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>2024 © Anamuddin Ahmad - All Rights Reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a href="https://www.instagram.com/official_anam_ali/" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/anamuddinahmad" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/anamuddinahmad" target="_blank">Linkedin</a></li>
+                <li><a href="https://leetcode.com/u/anamuddinahmad/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+        <script src="./script.js"></script>
+</body>
+
+</html>
